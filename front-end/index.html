@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>poke-catch</title>
+    
+</head>
+<body>
+    <div id="tela-inicial" class="container-tela-inicial">
+        <h1> POKE <br> CATCH </h1>
+        <div class="container-info-inicial">
+        <p>Digite seu nome, jogador!:</p>
+        <input type="text" id="nome-jogador" placeholder="Nome">
+
+        <p>Escolha seu personagem:</p>
+    <div class="container-personagens">
+        <label>
+            <!-- O 'value' guarda o link da imagem que vamos usar! -->
+            <input type="radio" name="avatar" value="https://play.pokemonshowdown.com/sprites/trainers/red.png" checked>
+            <img src="https://play.pokemonshowdown.com/sprites/trainers/red.png" alt="Menino">
+        </label>
+        
+        <label>
+            <input type="radio" name="avatar" value="https://play.pokemonshowdown.com/sprites/trainers/leaf.png">
+            <img src="https://play.pokemonshowdown.com/sprites/trainers/may.png" alt="Menina">
+        </label>
+    </div>
+
+        <button>Começar aventura!</button>
+        </div>
+    </div>
+
+    <div id="tela-mapa">
+        <select name="" id="selecao-mapa" required> 
+            <option value="" selected disabled> Explore o Mapa! </option>
+            <option value="palletTown">Pallet Town</option>
+            <option value="viridianCity">Viridian City</option>
+        </select>
+
+        <button>Procurar Pokémon</button>
+        <button id="btn-abrir-pc">Abrir PC / Mochila</button>
+    </div>
+
+    <div id="tela-captura">
+
+    <div id="pokemon-selvagem">
+        <h2 id="nome-pokemon-selvagem">Um Pokémon apareceu!</h2>
+        <img id="img-pokemon-selvagem" src="" alt="Pokemon selvagem" width="150">
+    </div>
+
+    <div>
+        <input type="text" name="" id="apelido-pokemon" placeholder="Apelido do Pokémon">
+        <input type="number" name="" id="nivel-pokemon" placeholder="Nível do Pokémon">
+        <input type="date" name="" id="data-captura" placeholder="Data da Captura">
+
+        <label for=""> 
+            <input type="radio" name="tipoPokebola" id="pokebola-padrao"> Pokebola Padrão 
+        </label>
+
+        <label for=""> 
+            <input type="radio" name="tipoPokebola" id="grat-ball"> Great Ball 
+        </label>
+        
+        <label for=""> 
+            <input type="radio" name="tipoPokebola" id="ultra-ball"> Ultra Ball 
+        </label>
+    </div>
+
+    <div>
+        <label for=""> 
+            <input type="checkbox" name="" id="paralisado"> Paralisado 
+        </label>
+
+        <label for=""> 
+            <input type="checkbox" name="" id="dormindo"> Dormindo 
+        </label>
+
+        <label for=""> 
+            <input type="checkbox" name="" id="envenenado"> Envenenado 
+        </label>
+
+        <label for=""> 
+            <input type="checkbox" name="" id="queimado"> Queimado 
+        </label>
+    </div>
+
+    <button>Lançar Pokebola</button>
+    </div>
+
+    <div id="tela-resultado">
+        <div id="pokemon-selvagem">
+        <h2 id="mensagem-resultado">Pokémon Capturado com Sucesso!</h2>
+        </div>
+
+        <img id="img-resultado" src="" alt="Pokemon Capturado" width="150">
+        
+        <div id="info-captura">
+            <p><strong>Apelido:</strong> <span id="res-apelido"></span></p>
+            <p><strong>Nível:</strong> <span id="res-nivel"></span></p>
+            <p><strong>Pokébola:</strong> <span id="res-pokebola"></span></p>
+        </div>
+
+        <button id="btn-procurar-mais">Procurar mais Pokémon</button>
+    </div>
+
+    <!-- NOVA TELA: O PC do Treinador -->
+    <div id="tela-pc" style="display: none;">
+        <h2>PC do Treinador</h2>
+    
+    <!-- É dentro dessa div vazia que a mágica vai acontecer! -->
+        <div id="container-pokemons"></div> 
+    
+        <br>
+        <button id="btn-voltar-mapa-pc">Desligar PC e Voltar</button>
+    </div>
+
+    <script src="script.js"> </script>
+</body>
+</html>
