@@ -36,7 +36,7 @@ btnComecar.onclick = function() {
         alert("Por favor, digite o seu nome de Treinador!");
     } else {
         telaInicial.style.display = "none";
-        telaMapa.style.display = "block";
+        telaMapa.style.display = "flex";
 
         document.getElementById('img-avatar-mapa').src = avatarSelecionado.value;
         document.getElementById('nome-treinador-mapa').innerText = "Treinador(a) " + nome;
@@ -50,7 +50,7 @@ btnProcurar.onclick = function() {
         alert("Por favor, selecione uma cidade válida no mapa.");
     } else {
         telaMapa.style.display = "none";
-        telaCaptura.style.display = "block";
+        telaCaptura.style.display = "flex";
 
         let nivelSorteado = Math.floor(Math.random() * 100) + 1;
 
@@ -156,7 +156,7 @@ btnLancar.onclick = function() {
     .then(function(resposta ) {
         if(resposta.status == 201) {
             telaCaptura.style.display = "none";
-            telaResultado.style.display = "block";
+            telaResultado.style.display = "flex";
 
             document.getElementById("res-apelido").innerText = apelido;
             document.getElementById("res-nivel").innerText = nivel;
@@ -206,4 +206,20 @@ btnVoltarPc.onclick = function() {
 btnProcurarMais.onclick = function(){
     telaResultado.style.display = "none";
     telaMapa.style.display = "block";
+}
+
+const selecaoMapa = document.getElementById('selecao-mapa')
+
+selecaoMapa.onchange = function() {
+    const cidadeEscolhida = selecaoMapa.value;
+
+    if(cidadeEscolhida == "palletTown") {
+        telaMapa.style.backgroundImage = "url('./PalletToen.png')";
+    } else if (cidadeEscolhida == "viridianCity"){
+        telaMapa.style.backgroundImage = "url('./ViridianCity.png')";
+    }
+
+    telaMapa.style.backgroundSize = "cover";
+    telaMapa.style.backgroundPosition = "center";
+    telaMapa.style.backgroundRepeat = "no-repeat";
 }

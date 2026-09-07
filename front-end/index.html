@@ -17,7 +17,6 @@
         <p>Escolha seu personagem:</p>
     <div class="container-personagens">
         <label>
-            <!-- O 'value' guarda o link da imagem que vamos usar! -->
             <input type="radio" name="avatar" value="https://play.pokemonshowdown.com/sprites/trainers/red.png" checked>
             <img src="https://play.pokemonshowdown.com/sprites/trainers/red.png" alt="Menino">
         </label>
@@ -32,29 +31,45 @@
         </div>
     </div>
 
-    <div id="tela-mapa">
-        <select name="" id="selecao-mapa" required> 
+    <div id="tela-mapa" class="container-tela-mapa">
+        <select name="" id="selecao-mapa" required class="selecao-mapa"> 
             <option value="" selected disabled> Explore o Mapa! </option>
             <option value="palletTown">Pallet Town</option>
             <option value="viridianCity">Viridian City</option>
         </select>
 
-        <button>Procurar Pokémon</button>
+        <div class="botao-tela-mapa">
+        <button class="botao-procurar-pokemon">Procurar Pokémon</button>
         <button id="btn-abrir-pc">Abrir PC / Mochila</button>
+        </div>
     </div>
 
-    <div id="tela-captura">
+    <div id="tela-captura" class="container-tela-captura">
 
     <div id="pokemon-selvagem">
-        <h2 id="nome-pokemon-selvagem">Um Pokémon apareceu!</h2>
+        <h2 id="nome-pokemon-selvagem" >Um Pokémon apareceu!</h2>
         <img id="img-pokemon-selvagem" src="" alt="Pokemon selvagem" width="150">
     </div>
 
-    <div>
+    <div class="container-info-captura">
+    <div class="container-info-pokemon">
+        <label for="">
+            <p>Apelido do Pokemon</p>
         <input type="text" name="" id="apelido-pokemon" placeholder="Apelido do Pokémon">
-        <input type="number" name="" id="nivel-pokemon" placeholder="Nível do Pokémon">
-        <input type="date" name="" id="data-captura" placeholder="Data da Captura">
+        </label>
 
+        <label for="">
+            <p>Nível do Pokemon</p>
+        <input type="number" name="" id="nivel-pokemon" placeholder="Nível do Pokémon">
+        </label>
+
+        <label for="">
+            <p>Data da Captura</p>
+        <input type="date" name="" id="data-captura" placeholder="Data da Captura">
+        </label>
+    </div>
+    
+    <div class="container-pokebola">
         <label for=""> 
             <input type="radio" name="tipoPokebola" id="pokebola-padrao"> Pokebola Padrão 
         </label>
@@ -68,7 +83,9 @@
         </label>
     </div>
 
-    <div>
+    <div class="container-estado">
+        <p>Estado do Pokemon</p>
+        <div class="divisao-estado">
         <label for=""> 
             <input type="checkbox" name="" id="paralisado"> Paralisado 
         </label>
@@ -84,9 +101,12 @@
         <label for=""> 
             <input type="checkbox" name="" id="queimado"> Queimado 
         </label>
+        </div>
+    </div>
+    <button class="botao-lancar">Lançar Pokebola</button>
     </div>
 
-    <button>Lançar Pokebola</button>
+    
     </div>
 
     <div id="tela-resultado">
