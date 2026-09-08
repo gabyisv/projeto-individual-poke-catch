@@ -99,7 +99,7 @@ body {
 }
 
 
-p, input,button {
+p, input,button, label {
     font-family: "Press Start 2P";
 
 }
@@ -214,7 +214,8 @@ p, input,button {
 }
 
 .container-estado label, .container-pokebola label {
-    font-size: 20px;
+    font-size: 14px;
+
 }
 
 .container-info-pokemon input{
@@ -229,11 +230,113 @@ p, input,button {
     display: flex;
 }
 
-.botao-lancar{
+.botao-lancar, #btn-procurar-mais{
     padding: 20px;
     width: 500px;
     border: none;
     background-color: #010b55;
     border-radius: 20px;
     color: white;
+}
+
+#tela-resultado{
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.container-resultado {
+    height: 50%;
+    width: 50%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 1.2); 
+    border: solid 2px black;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.info-captura {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 200px;
+}
+
+#img-resultado {
+    width:300px;
+}
+
+#mensagem-resultado, #nome-pokemon-selvagem, .titulo-pc {
+    font-family: "Press Start 2P";
+    font-size: 16px;
+    color: #c80000;
+}
+
+.info-pc-pokemon {
+border: 2px solid black; 
+margin: 10px; 
+padding: 10px;
+width: 20%;
+ border-radius: 20px; 
+ align-items: center;
+ background-color: #f9f9f9;
+ display: flex;
+ flex-direction: column;
+ font-size: 12px;
+
+}
+
+#container-pokemons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: auto;
+    min-height: 50vh;
+    justify-content: center;
+    width: 80%;
+}
+
+
+#btn-voltar-mapa-pc {
+        padding: 20px;
+    width: 500px;
+    border: none;
+    background-color: #c80000;
+    border-radius: 20px;
+    color: white;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    border: solid 2px white;
+}
+
+.titulo-pc {
+    background-color: white;
+    width: 18%;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    border: solid 2px #c80000;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 1.2); 
+}
+
+#tela-pc{
+        background-image: url('mochila-pokemon.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    height: 100vh; 
+    margin: 0; 
 }

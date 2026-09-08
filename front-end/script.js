@@ -186,7 +186,7 @@ btnAbrirPc.onclick = function() {
             let captura = listaCapturas[i];
 
             container.innerHTML += `
-                <div style="border: 2px solid black; margin: 10px; padding: 10px; border-radius: 5px; background-color: #f9f9f9;">
+                <div class="info-pc-pokemon">
                     <img src="${captura.imagemPokemon}" width="100">
                     <h3>${captura.apelidoPokemon}</h3>
                     <p><strong>Nível:</strong> ${captura.nivelPokemon}</p>
